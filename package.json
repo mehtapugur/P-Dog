@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/mehtapugur/P-Book#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

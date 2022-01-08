@@ -1,11 +1,26 @@
 const express = require("express");
+const ejs = require("ejs");
 
 //oluşturduğumuz app değişkenine express fonksiyonunu atarız
 const app = express();
 
+//Template Engine
+app.set("view engine", "ejs");
+
+app.use(express.static("public"));
+
+//Routes
 //önce ulaşmak istediğimiz adresi yazarız ("/")
 app.get("/", (req, res) => {
-  res.send("Merhabaa"); //ekrana yazar
+  res.render("index"); //ekrana yazar
+});
+
+app.get("/about", (req, res) => {
+  res.render("about"); //ekrana yazar
+});
+
+app.get("/add", (req, res) => {
+  res.render("add"); //ekrana yazar
 });
 
 const port = 3000;
