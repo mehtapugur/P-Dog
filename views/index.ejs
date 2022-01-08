@@ -7,9 +7,9 @@
 
                     <div class="tm-welcome-container text-center text-white">
                         <div class="tm-welcome-container-inner">
-                            <p class="tm-welcome-text mb-1 text-white">Video Catalog is brought to you by TemplateMo.
+                            <p class="tm-welcome-text mb-1 text-white">Let's discover the world of our friends.
                             </p>
-                            <p class="tm-welcome-text mb-5 text-white">This is a full-width video banner.</p>
+                            <p class="tm-welcome-text mb-5 text-white">This is a Dog planet.</p>
                             <a href="#content" class="btn tm-btn-animate tm-btn-cta tm-icon-down">
                                 <span>Discover</span>
                             </a>
@@ -19,7 +19,7 @@
                     <div id="tm-video-container">
                         <video autoplay muted loop id="tm-video">
                             <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
-                            <source src="video/wheat-field.mp4" type="video/mp4">
+                            <source src="video/mainpage-bg.mp4" type="video/mp4">
                         </video>
                     </div>
 
@@ -199,66 +199,66 @@
                     </main>
 
                     <%- include("partials/_footer") -%>
-        <script>
-            function setVideoSize() {
-                const vidWidth = 1920;
-                const vidHeight = 1080;
-                let windowWidth = window.innerWidth;
-                let newVidWidth = windowWidth;
-                let newVidHeight = windowWidth * vidHeight / vidWidth;
-                let marginLeft = 0;
-                let marginTop = 0;
+                        <script>
+                            function setVideoSize() {
+                                const vidWidth = 1920;
+                                const vidHeight = 1080;
+                                let windowWidth = window.innerWidth;
+                                let newVidWidth = windowWidth;
+                                let newVidHeight = windowWidth * vidHeight / vidWidth;
+                                let marginLeft = 0;
+                                let marginTop = 0;
 
-                if (newVidHeight < 500) {
-                    newVidHeight = 500;
-                    newVidWidth = newVidHeight * vidWidth / vidHeight;
-                }
+                                if (newVidHeight < 500) {
+                                    newVidHeight = 500;
+                                    newVidWidth = newVidHeight * vidWidth / vidHeight;
+                                }
 
-                if (newVidWidth > windowWidth) {
-                    marginLeft = -((newVidWidth - windowWidth) / 2);
-                }
+                                if (newVidWidth > windowWidth) {
+                                    marginLeft = -((newVidWidth - windowWidth) / 2);
+                                }
 
-                if (newVidHeight > 720) {
-                    marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
-                }
+                                if (newVidHeight > 720) {
+                                    marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
+                                }
 
-                const tmVideo = $('#tm-video');
+                                const tmVideo = $('#tm-video');
 
-                tmVideo.css('width', newVidWidth);
-                tmVideo.css('height', newVidHeight);
-                tmVideo.css('margin-left', marginLeft);
-                tmVideo.css('margin-top', marginTop);
-            }
+                                tmVideo.css('width', newVidWidth);
+                                tmVideo.css('height', newVidHeight);
+                                tmVideo.css('margin-left', marginLeft);
+                                tmVideo.css('margin-top', marginTop);
+                            }
 
-            $(document).ready(function () {
-                /************** Video background *********/
+                            $(document).ready(function () {
+                                /************** Video background *********/
 
-                setVideoSize();
+                                setVideoSize();
 
-                // Set video background size based on window size
-                let timeout;
-                window.onresize = function () {
-                    clearTimeout(timeout);
-                    timeout = setTimeout(setVideoSize, 100);
-                };
+                                // Set video background size based on window size
+                                let timeout;
+                                window.onresize = function () {
+                                    clearTimeout(timeout);
+                                    timeout = setTimeout(setVideoSize, 100);
+                                };
 
-                // Play/Pause button for video background      
-                const btn = $("#tm-video-control-button");
+                                // Play/Pause button for video background      
+                                const btn = $("#tm-video-control-button");
 
-                btn.on("click", function (e) {
-                    const video = document.getElementById("tm-video");
-                    $(this).removeClass();
+                                btn.on("click", function (e) {
+                                    const video = document.getElementById("tm-video");
+                                    $(this).removeClass();
 
-                    if (video.paused) {
-                        video.play();
-                        $(this).addClass("fas fa-pause");
-                    } else {
-                        video.pause();
-                        $(this).addClass("fas fa-play");
-                    }
-                });
-            })
-        </script>
+                                    if (video.paused) {
+                                        video.play();
+                                        $(this).addClass("fas fa-pause");
+                                    } else {
+                                        video.pause();
+                                        $(this).addClass("fas fa-play");
+                                    }
+                                });
+                            })
+                        </script>
     </body>
 
     </html>
