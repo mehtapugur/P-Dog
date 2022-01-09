@@ -12,6 +12,7 @@ const app = express();
 mongoose.connect("mongodb://localhost/pdog-db", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  //useFindAndModify: false,
 });
 
 //Template Engine
@@ -22,7 +23,11 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(fileUpload());
-app.use(methodOverride("_method"));
+app.use(
+  methodOverride("_method", {
+    methods: ["POST", "GET"],
+  })
+);
 
 //Routes
 //önce ulaşmak istediğimiz adresi yazarız ("/")
@@ -87,6 +92,14 @@ app.put("/photos/:id", async (req, res) => {
   photo.save();
 
   res.redirect(`/photos/${req.params.id}`);
+});
+
+app.delete("/photos/:id", async (req, res) => {
+  const photo = await Photo.findOne({ _id: req.params.id });
+  let deletedImage = __dirname + "/puclic/" + photo.image;
+  fs.unlinkSync(deletedImage);
+  await Photo.findByIdAndRemove(req.params.id);
+  res.redirect("/");
 });
 
 const port = 3000;
