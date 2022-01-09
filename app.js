@@ -18,7 +18,7 @@ mongoose.connect("mongodb://localhost/pdog-db", {
 //Template Engine
 app.set("view engine", "ejs");
 
-//Mİddlewares
+//Middlewares
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
