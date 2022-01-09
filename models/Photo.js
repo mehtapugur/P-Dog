@@ -14,4 +14,5 @@ const PhotoSchema = new Schema({
 
 const Photo = mongoose.model("Photo", PhotoSchema);
 
+//Modele dışarıdan ulaşabilmek için export ederiz
 module.exports = Photo;
