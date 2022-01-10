@@ -10,11 +10,12 @@ It is a platform where users can upload different breeds of dogs.
 - [Bootstrap](https://getbootstrap.com/docs/)
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
+- [Express.js](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 
-A puzzle game was developed using the JavaScript Drag and Drop API.<br/>
-Image and audio files were used in the game.<br/>
-CSS is used for styling.
+P-DOG was developed using many libraries. Like Mongoose, EDJ etc. If you want to see them all, you can check the `package.json` file. <br/>
+A template was used for frontend.<br/>
+Bootstrap and CSS is used for styling.
 <br/>
 
 ## :sparkles: Main Features
