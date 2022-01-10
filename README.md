@@ -28,7 +28,7 @@ CSS is used for styling.
 
 | Start | Finish | 
 | --- | --- |
-| <img src="https://user-images.githubusercontent.com/24686636/147887007-5bfa427b-a168-4190-a432-636eb7b52ec3.png"> | <img src="https://user-images.githubusercontent.com/24686636/147887046-46e0c707-5e0a-4866-ad45-5ca08b6fa305.png"> |
+| <img src="https://user-images.githubusercontent.com/24686636/148835723-c83962d4-1733-4dbf-a9d4-07dfd0f482c5.png"> | <img src="https://user-images.githubusercontent.com/24686636/147887046-46e0c707-5e0a-4866-ad45-5ca08b6fa305.png"> |
 <hr/>
 
 https://user-images.githubusercontent.com/24686636/147887134-aba68894-3051-4659-8051-b6e2cd10bc46.mp4
