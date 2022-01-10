@@ -2,11 +2,11 @@ const Photo = require("../models/Photo");
 const fs = require("fs");
 
 exports.getAllPhotos = async (req, res) => {
-  const page = req.query.page || 1;
-  const photosPerPage = 3;
+  const page = req.query.page || 1; //sorgulanan sayfayı, yoksa 1. sayfayı getirir
+  const photosPerPage = 3; //her sayfaya 3 görsel
   const totalPhotos = await Photo.find().countDocuments();
   const photos = await Photo.find({})
-    .sort("-dateCreate")
+    .sort("-dateCreate") //en son yüklenen en başta olacak şekilde sıralar
     .skip((page - 1) * photosPerPage)
     .limit(photosPerPage);
 
@@ -27,6 +27,7 @@ exports.getPhoto = async (req, res) => {
 exports.createPhoto = async (req, res) => {
   const uploadDir = "public/uploads";
 
+  // dosya yolu oluşturulmadıysa oluşturur
   if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);
   }
@@ -34,6 +35,7 @@ exports.createPhoto = async (req, res) => {
   let uploadImage = req.files.image;
   let uploadPath = __dirname + "/../public/uploads/" + uploadImage.name;
 
+  //move ile fotoğrafı taşıma işlemini yapar
   uploadImage.mv(uploadPath, async () => {
     await Photo.create({
       ...req.body,
@@ -43,6 +45,7 @@ exports.createPhoto = async (req, res) => {
   });
 };
 
+//fotoğrafın güncellenmesi işlemi
 exports.updatePhoto = async (req, res) => {
   const photo = await Photo.findOne({ _id: req.params.id });
   photo.title = req.body.title;
@@ -54,8 +57,8 @@ exports.updatePhoto = async (req, res) => {
 
 exports.deletePhoto = async (req, res) => {
   const photo = await Photo.findOne({ _id: req.params.id });
-  let deletedImage = __dirname + "/../puclic/" + photo.image;
-  fs.unlinkSync(deletedImage);
+  let deletedImage = __dirname + "/../puclic/" + photo.image; //silinecek görselin dosya yolu alınır
+  fs.unlinkSync(deletedImage); //dosya yolundaki görsel silinir
   await Photo.findByIdAndRemove(req.params.id);
   res.redirect("/");
 };
