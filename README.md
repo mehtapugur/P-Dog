@@ -40,9 +40,8 @@ https://user-images.githubusercontent.com/24686636/147887134-aba68894-3051-4659-
 
 ## :computer: Setup
   
-  - To run the project, Git must be installed on your computer. After completing this installation, we open the git terminal. We write the following expression ``git clone https://github.com/Kodluyoruz-NodeJs-Bootcamp/week1-mehtapugur`` and press the enter button. After opening the downloaded project in the code editor, we open the `http://localhost:5500/` on our browser. In order to run this, the **Live Server** extension must be downloaded in your VSCode.<br/><br/>
+  - To run the project, Git, Node.js and MongoDB must be installed on your computer. After completing these installations, we open the git terminal. We write the following expression `git clone https://github.com/mehtapugur/P-Dog.git` and press the enter button. After opening the downloaded project in the code editor, we open the terminal and write the following expression `npm install` and press enter. Then we can open P-Dog on browser. For this we open the `http://localhost:3000/` url on our browser. Hurray! You can see P-Dog.
  
-
 ## :memo: License
 This project is under the terms of the MIT license.
 <br/>
