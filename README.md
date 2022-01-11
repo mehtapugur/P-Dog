@@ -36,7 +36,7 @@ Bootstrap and CSS is used for styling.
 | <img src="https://user-images.githubusercontent.com/24686636/148835723-c83962d4-1733-4dbf-a9d4-07dfd0f482c5.png"> |
 <hr/>
 
-https://user-imagithubusercontcom/24686636/147887134-aba68894-3051-4659-8051-b6e2cd10bc46.mp4
+https://user-imagithubusercontcom/24686636/147887134-aba68894-3051-4659-8051-b6e2cd10bc46p4
 
 ## :computer: Setup
   
