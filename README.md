@@ -20,10 +20,10 @@ Bootstrap and CSS is used for styling.
 
 ## :sparkles: Main Features
 
-  - Each time the game is started, the puzzle pieces at the top change dynamically.
-  - The user is only allowed to insert the puzzle pieces in the correct places.
-  - If the user tries to put the puzzle piece in the wrong area, an audio file called error will be played.
-  - If the user places the piece in the right place, the audio file named win will be played.
+  - Users can add dog breeds to the site.
+  - They can also upload the added dog breed information, name and picture.
+  - They can update the added information later.
+  - They can delete added dog breeds.
 
 ## :camera_flash: Screenshots
 
