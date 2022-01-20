@@ -39,7 +39,7 @@ Bootstrap and CSS is used for styling.
 | --- | --- |
 | <img src="https://user-images.githubusercontent.com/24686636/150374815-60b2eafe-e424-4c0f-8a2a-d793077c7f1d.png"> | <img src="https://user-images.githubusercontent.com/24686636/150374873-4d2e40fb-6960-4e7a-bf53-ac8292bcd907.png"> |
 
-| Details | Alert for Delete Option | 
+| Details - Delete | Alert for Delete Option | 
 | --- | --- |
 | <img src="https://user-images.githubusercontent.com/24686636/150376017-5ce3d870-df23-420e-bd0a-f4f6df777c94.png"> | <img src="https://user-images.githubusercontent.com/24686636/150375079-735d1ecd-27da-460d-b68d-d688163d533d.png"> |
 <hr/>
